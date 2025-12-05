@@ -1,0 +1,8 @@
+[
+	{
+	 "nama": "Rifki Alkatiri",
+	 "nip": "199105172025051001",
+	 "nohp": "081246620938",
+	 "alamat": "penkase"
+	},
+]
