@@ -2,49 +2,51 @@
 sass app.scss:app.css
 sass --watch app.scss:app.css
 */
-:root {
+
+:root{
   --parent-width: 210px;
   --parent-height: 210px;
 }
 
-h2 {
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
   font-family: "Arial", "Tahoma", sans-serif;
   color: red;
 }
 
-.parent {
+
+.parent{
   width: var(--parent-width);
   height: var(--parent-height);
   border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 }
 
-.child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.child{
+  @include flex-center;
   flex-wrap: wrap;
   column-gap: 5px;
   /*row-gap: 0px;*/
-  width: calc(var(--parent-width) - 20px);
-  height: calc(var(--parent-height) - 90px);
+  width: calc( var(--parent-width) - 20px );
+  height: calc( var(--parent-height) - 90px );
   /*border: 1px solid blue;*/
 }
 
-.child button {
+.child button{
   width: 40px;
   height: 40px;
   border-radius: 5px;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px rgba(0, 0, 0, .5);
   margin: 0;
 }
 
-.child button:hover {
+.child button:hover{
   width: 42px;
   height: 42px;
-  background-color: rgba(255, 0, 0, 0.5);
-}
-
-/*# sourceMappingURL=app.css.map */
+  background-color: rgba(255, 0, 0, .5);
+} 
